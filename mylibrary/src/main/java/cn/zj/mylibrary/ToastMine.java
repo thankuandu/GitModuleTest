@@ -8,6 +8,6 @@ package cn.zj.mylibrary;
  */
 public class ToastMine {
 
-    
+
 
 }
