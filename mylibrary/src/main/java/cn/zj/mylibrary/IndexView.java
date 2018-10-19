@@ -26,7 +26,6 @@ public class IndexView extends View {
     };
 
     private Context mContext;
-    private TextView mShowTextDialog;
 
     private int mWordSize;
     private int mwordColor;
@@ -52,6 +51,7 @@ public class IndexView extends View {
         this(context, attrs, defStyleAttr, 0);
     }
 
+
     public IndexView(Context context, @Nullable AttributeSet attrs, int defStyleAttr, int defStyleRes) {
         super(context, attrs, defStyleAttr, defStyleRes);
         mContext = context;
@@ -60,9 +60,6 @@ public class IndexView extends View {
         initPaint();
     }
 
-    public void setShowTextDialog(TextView textDialog) {
-        this.mShowTextDialog = textDialog;
-    }
 
     private void initPaint() {
         mPaint = new Paint();
@@ -92,7 +89,6 @@ public class IndexView extends View {
     }
 
 
-
     @Override
     public boolean onTouchEvent(MotionEvent event) {
         int oldC = mChoose;
@@ -104,11 +100,7 @@ public class IndexView extends View {
         switch (action) {
             case MotionEvent.ACTION_UP:
                 setBackgroundColor(0x00000000);
-                mChoose = -1;//
-
-                if (mShowTextDialog != null) {
-                    mShowTextDialog.setVisibility(INVISIBLE);
-                }
+                mChoose = -1;
                 invalidate();
                 break;
             default:
@@ -118,10 +110,7 @@ public class IndexView extends View {
                         if (mOnTouchingLetterChangedListener != null) {
                             mOnTouchingLetterChangedListener.onTouchingLetterChanged(WORDS[c]);
                         }
-                        if (mShowTextDialog != null) {
-                            mShowTextDialog.setText(WORDS[c]);
-                            mShowTextDialog.setVisibility(View.VISIBLE);
-                        }
+                        ToastMine.show(mContext, WORDS[c]);
                     }
                     mChoose = c;
                     invalidate();
