@@ -1,4 +1,4 @@
-package cn.kc.gitmoduletest;
+package cn.zj.mylibrary;
 
 import org.junit.Test;
 

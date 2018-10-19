@@ -1,10 +1,7 @@
-package cn.kc.gitmoduletest;
+package cn.zj.gitmoduletest;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.widget.TextView;
-
-import cn.kc.mylibrary.IndexView;
 
 public class MainActivity extends AppCompatActivity {
 

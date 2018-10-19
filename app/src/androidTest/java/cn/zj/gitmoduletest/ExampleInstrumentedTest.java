@@ -1,4 +1,4 @@
-package cn.kc.mylibrary;
+package cn.zj.gitmoduletest;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;
@@ -21,6 +21,6 @@ public class ExampleInstrumentedTest {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getTargetContext();
 
-        assertEquals("cn.kc.mylibrary.test", appContext.getPackageName());
+        assertEquals("cn.kc.gitmoduletest", appContext.getPackageName());
     }
 }
